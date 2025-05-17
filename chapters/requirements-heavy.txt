@@ -12,7 +12,6 @@ murmurhash==1.0.5
 psutil==5.8.0
 pycryptodome==3.10.1
 pycryptodomex==3.10.1
-scapy==2.4.5
 scipy==1.7.1
 spacy-legacy==3.0.8
 spacy==3.1.2
