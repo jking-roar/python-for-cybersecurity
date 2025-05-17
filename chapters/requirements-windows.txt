@@ -1,0 +1,10 @@
+ansicon==1.89.0
+filetime==0.1.0
+jinxed==1.1.0
+pefile==2021.5.24
+pyreadline==2.1
+pywin32==301
+pywin32-ctypes==0.2.0
+pypsexec==0.2.0
+setproctitle==1.2.2
+WMI==1.5.1

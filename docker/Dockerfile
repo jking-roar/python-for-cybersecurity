@@ -7,8 +7,9 @@ WORKDIR /app
 # Copy the requirements.txt from the /downloads folder into the container
 COPY ./chapters/requirements.txt /app/requirements.txt
 
+# upgrade pip to the latest version
+RUN python -m pip install --upgrade pip
 # Install the necessary dependencies from requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
-# Copy the rest of the project files into the container
-COPY . /app
+# copy the chapters folders into the container
