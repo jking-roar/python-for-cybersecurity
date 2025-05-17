@@ -1,6 +1,7 @@
 import dns
 import dns.resolver
 import socket
+import sys
 
 domains = {}
 subs = "dns_search.txt"
@@ -8,8 +9,7 @@ subs = "dns_search.txt"
 res = dns.resolver.Resolver()
 res.nameservers = ["8.8.8.8"]
 res.port = 53
-
-domain = "google.com"
+domain = sys.argv[1] if len(sys.argv) > 1 else "google.com"
 nums = True
 
 def ReverseDNS(ip):
@@ -55,5 +55,6 @@ dictionary = []
 with open(subs,"r") as f:
     dictionary = f.read().splitlines()
 HostSearch(domain,dictionary,nums)
+
 for domain in domains:
     print("%s: %s" % (domain, domains[domain]))
