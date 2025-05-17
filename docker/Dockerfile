@@ -19,8 +19,10 @@ RUN python -m pip install --upgrade pip
 
 # Copy requirements and install dependencies
 COPY ./chapters/requirements.txt /app/requirements.txt
+
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
+COPY ./chapters/requirements-heavy.txt /app/requirements-heavy.txt
 # Copy project code
 #COPY . /app
 #
