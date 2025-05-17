@@ -15,9 +15,10 @@ RUN apt-get update && \
 # Set working directory
 WORKDIR /app
 
-# Copy requirements and install dependencies
-COPY ./downloads/requirements.txt /app/requirements.txt
 RUN python -m pip install --upgrade pip
+
+# Copy requirements and install dependencies
+COPY ./chapters/requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
 # Copy project code
