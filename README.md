@@ -1,6 +1,11 @@
 # Python Cybersecurity Project
 
-This project contains Python exercises focused on cybersecurity. It uses a Docker container to provide an isolated environment with the necessary dependencies.
+This project contains Python exercises focused on cybersecurity.
+The exercises are from the book "Python for Cybersecurity" by Howard E. Poston III.
+The source code files can be downloaded from https://wiley.com/go/pythonforcybersecurity.
+
+
+I'm using a Docker container to provide an isolated environment with the necessary dependencies. I have python 3.13 installed locally, so that's what I'm putting int the container.
 
 ## Getting Started with Docker
 
