@@ -37,7 +37,7 @@ def DNSRequest(domain):
                         DNSRequest(d)
                     else:
                         domains[d] = [a]
-    except (dns.resolver.NXDOMAIN, dns.exception.Timeout):
+    except (dns.resolver.NXDOMAIN, dns.exception.Timeout, dns.resolver.NoAnswer):
         return []
     return ips
 

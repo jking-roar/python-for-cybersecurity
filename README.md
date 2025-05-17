@@ -61,5 +61,5 @@ Where <container_id> is the ID of the running container, which you can find by r
 
 Running chapter 1 code
 ```bash
-docker run -it --rm -v "${PWD}\chapters\CH01_code:/app/code" python-cybersecurity /bin/bash
+  docker run -it --rm -v "${PWD}\chapters\CH01_code:/app/code" python-cybersecurity /bin/bash
 ```
