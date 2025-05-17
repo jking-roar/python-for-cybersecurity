@@ -1,15 +1,26 @@
-# Use an official Python runtime as a parent image
 FROM python:3.13-slim
 
-# Set the working directory in the container
+# Install system dependencies required to build Python packages with C extensions
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    build-essential \
+    gcc \
+    g++ \
+    make \
+    python3-dev \
+    libffi-dev \
+    libssl-dev && \
+    rm -rf /var/lib/apt/lists/*
+
+# Set working directory
 WORKDIR /app
 
-# Copy the requirements.txt from the /downloads folder into the container
-COPY ./chapters/requirements.txt /app/requirements.txt
-
-# upgrade pip to the latest version
+# Copy requirements and install dependencies
+COPY ./downloads/requirements.txt /app/requirements.txt
 RUN python -m pip install --upgrade pip
-# Install the necessary dependencies from requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
-# copy the chapters folders into the container
+# Copy project code
+#COPY . /app
+#
+#CMD ["python", "your_script.py"]
